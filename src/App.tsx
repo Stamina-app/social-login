@@ -7,6 +7,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import "./App.css";
 import { GoogleSocialConnect } from "./components/GoogleSocialConnect";
 import { AuthLanding } from "./components/AuthLanding";
+import { MicrosoftSocialConnect } from "./components/MicrosoftSocialConnect";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
     >
       <Routes>
         <Route path="/" element={<AuthLanding />} />
-        <Route path="/oauth/microsoft" element={<div>Microsoft OAuth</div>} />
+        <Route path="/oauth/microsoft" element={<MicrosoftSocialConnect />} />
+        <Route path="/oauth/microsoft/callback" element={<AuthLanding />} />
         <Route path="/oauth/google" element={<GoogleSocialConnect />} />
         <Route path="/oauth/google-login" element={<GoogleSocialLogin />} />
         <Route path="*" element={<NotFound />} />

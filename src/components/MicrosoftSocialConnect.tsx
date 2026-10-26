@@ -4,7 +4,7 @@ const MICROSOFT_CONNECT_SCOPE = [
   "offline_access",
   "User.Read",
   "Mail.Read",
-  "Calendars.Read",
+  "Calendars.ReadWrite",
 ].join(" ");
 
 export const MicrosoftSocialConnect = () => {

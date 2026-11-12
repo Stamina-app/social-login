@@ -4,7 +4,10 @@ const MICROSOFT_CONNECT_SCOPE = [
   "offline_access",
   "User.Read",
   "Mail.Read",
+  "Mail.Send",
+  "Mail.ReadWrite",
   "Calendars.ReadWrite",
+  "https://outlook.office.com/IMAP.AccessAsUser.All",
 ].join(" ");
 
 export const MicrosoftSocialConnect = () => {
@@ -32,7 +35,7 @@ export const MicrosoftSocialConnect = () => {
 
     // replace() so the back button doesn't land here and redirect again
     window.location.replace(
-      `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?${params}`
+      `https://login.microsoftonline.com/common/oauth2/v2.0/authorize?${params}`,
     );
   }, []);
 

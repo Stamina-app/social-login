@@ -5,7 +5,7 @@ const GOOGLE_CONNECT_SCOPE = [
   "https://www.googleapis.com/auth/calendar.events",
   "email",
   "profile",
-  "contacts.other.readonly",
+  "https://www.googleapis.com/auth/contacts.other.readonly",
 ].join(" ");
 
 export const GoogleSocialConnect = () => {

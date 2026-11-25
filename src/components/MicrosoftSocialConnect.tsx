@@ -8,6 +8,7 @@ const MICROSOFT_CONNECT_SCOPE = [
   "Mail.ReadWrite",
   "Calendars.ReadWrite",
   "https://outlook.office.com/IMAP.AccessAsUser.All",
+  "Contacts.Read",
 ].join(" ");
 
 export const MicrosoftSocialConnect = () => {

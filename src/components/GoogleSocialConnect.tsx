@@ -5,6 +5,7 @@ const GOOGLE_CONNECT_SCOPE = [
   "https://www.googleapis.com/auth/calendar.events",
   "email",
   "profile",
+  "contacts.other.readonly",
 ].join(" ");
 
 export const GoogleSocialConnect = () => {
@@ -46,8 +47,7 @@ export const GoogleSocialConnect = () => {
     } else if (action === "addEmailAccount") {
       scope = "https://mail.google.com email profile";
     } else if (action === "addCalendar") {
-      scope =
-        "email profile https://www.googleapis.com/auth/calendar.events";
+      scope = "email profile https://www.googleapis.com/auth/calendar.events";
     } else {
       scope = "https://mail.google.com email profile";
     }
